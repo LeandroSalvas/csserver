@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  cs16:
+    image: cs16
+    volumes: 
+      - ./config/users.ini:/home/cs16/cstrike/addons/amxmodx/configs/users.ini
+      - ./config/motd.txt:/home/cs16/cstrike/motd.txt
+      - ./config/mapcycle.txt:/home/cs16/cstrike/mapcycle.txt
+      - ./config/server.cfg:/home/cs16/cstrike/server.cfg
+    ports:
+      - "27015:27015/udp"
